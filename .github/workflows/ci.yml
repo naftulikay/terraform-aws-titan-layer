@@ -31,4 +31,4 @@ jobs:
           tflint_version: latest
       - run: tflint --version
       - run: tflint --init
-      - run: tflint -f --loglevel=info compact
+      - run: tflint -f compact --loglevel=info
