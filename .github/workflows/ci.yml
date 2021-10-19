@@ -27,6 +27,8 @@ jobs:
           path: |
             ~/.tflint.d/plugins
       - uses: terraform-linters/setup-tflint@v1
+        with:
+          tflint_version: latest
       - run: tflint --version
       - run: tflint --init
       - run: tflint -f --loglevel=info compact
