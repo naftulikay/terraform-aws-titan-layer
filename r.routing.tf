@@ -7,12 +7,7 @@ resource aws_route_table default {
   vpc_id = var.vpc_id
 
   # tags
-  tags = {
-    Name = "${var.name}-${count.index}.${var.zone}"
-    titan_layer = var.name
-    titan_network = var.network_name
-    titan_zone = var.zone
-  }
+  tags = merge({ Name = "${var.name}-${count.index}.${var.zone}" }, local.resource_tags)
 }
 
 resource aws_route_table_association default {

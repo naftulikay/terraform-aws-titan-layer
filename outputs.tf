@@ -1,5 +1,13 @@
 # Titan Layer Module - Outputs
 
+output addtl_tags {
+  value = var.addtl_tags
+
+  description = <<-EOF
+    Additional tags applied to resources.
+  EOF
+}
+
 output availability_zones {
   value = var.availability_zones
 
@@ -29,6 +37,14 @@ output network_name {
 
   description = <<-EOF
     The name of the Titan Network to which this layer belongs.
+  EOF
+}
+
+output resource_tags {
+  value = local.resource_tags
+
+  description = <<-EOF
+    Common tags associated with all resources.
   EOF
 }
 
