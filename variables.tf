@@ -1,5 +1,14 @@
 # Titan Layer Module - Variables
 
+variable addtl_tags {
+  type = map(string)
+  default = {}
+
+  description = <<-EOF
+    Additional tags to apply to resources.
+  EOF
+}
+
 variable availability_zones {
   type = list(string)
 

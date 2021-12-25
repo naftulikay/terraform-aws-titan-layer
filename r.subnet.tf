@@ -13,10 +13,5 @@ resource aws_subnet default {
   assign_ipv6_address_on_creation = true
 
   # tags
-  tags = {
-    Name = "${var.name}-${count.index}.${var.zone}"
-    titan_layer = var.name
-    titan_network = var.network_name
-    titan_zone = var.zone
-  }
+  tags = merge({ Name = "${var.name}-${count.index}.${var.zone}" }, local.resource_tags)
 }

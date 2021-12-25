@@ -6,12 +6,7 @@ resource aws_network_acl default {
   subnet_ids = aws_subnet.default.*.id
 
   # tags
-  tags = {
-    Name = "${var.name}.${var.zone}"
-    titan_layer = var.name
-    titan_network = var.network_name
-    titan_zone = var.zone
-  }
+  tags = merge({ Name = "${var.name}.${var.zone}" }, local.resource_tags)
 }
 
 # Default Ingress Rule: Allow All (Override by Lower Priority Rule)
