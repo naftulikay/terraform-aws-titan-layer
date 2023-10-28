@@ -31,7 +31,7 @@ output nat_gateway_ids {
 }
 
 output route_table_ids {
-  value = aws_route_table.default.*.id
+  value = [for route_table in aws_route_table.default : route_table.id]
 
   description = <<-EOF
     A list of route table ids for each subnet in this Titan layer.

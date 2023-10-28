@@ -3,7 +3,7 @@
 # Network ACL Shared by All Subnets in the Layer
 resource aws_network_acl default {
   vpc_id = var.vpc_id
-  subnet_ids = aws_subnet.default.*.id
+  subnet_ids = [for subnet in aws_subnet.default : subnet.id]
 
   # tags
   tags = merge({ Name = "${var.name}.${var.zone}" }, local.resource_tags)
