@@ -1,6 +1,7 @@
 # Titan Layer Module - Routing Variables
 
 variable egress_only_gateway_id {
+  type = string
   default = ""
 
   description = <<-EOF
@@ -11,6 +12,7 @@ variable egress_only_gateway_id {
 }
 
 variable internet_gateway_id {
+  type = string
   default = ""
 
   description = <<-EOF
