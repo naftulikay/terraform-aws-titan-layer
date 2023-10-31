@@ -18,6 +18,7 @@ variable availability_zones {
 }
 
 variable is_public {
+  type = bool
   default = false
 
   description = <<-EOF
@@ -28,24 +29,28 @@ variable is_public {
 }
 
 variable name {
+  type = string
   description = <<-EOF
     The name of this Titan layer.
   EOF
 }
 
 variable network_name {
+  type = string
   description = <<-EOF
     The name of the Titan Network to which this layer belongs.
   EOF
 }
 
 variable vpc_id {
+  type = string
   description = <<-EOF
     The VPC id of the Titan network owning this Titan layer.
   EOF
 }
 
 variable zone {
+  type = string
   description = <<-EOF
     The hosted zone of the Titan Network to which this layer belongs.
   EOF

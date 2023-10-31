@@ -1,7 +1,8 @@
 # Titan Layer Module - Subnet Variables
 
 variable cidr_mask_bits {
-  default = "7"
+  type = number
+  default = 7
 
   description = <<-EOF
     Number of bits to extend per subnet into the host network's /16.
@@ -16,6 +17,7 @@ variable cidr_mask_bits {
 }
 
 variable cidr_start {
+  type = number
   description = <<-EOF
     The third IPv4 octet to begin numbering layer subnets from.
 
@@ -28,6 +30,7 @@ variable cidr_start {
 }
 
 variable network_cidr_block {
+  type = string
   description = <<-EOF
     The IPv4 CIDR block of the host Titan network.
 
@@ -36,6 +39,7 @@ variable network_cidr_block {
 }
 
 variable network_ipv6_cidr_block {
+  type = string
   description = <<-EOF
     The IPv6 CIDR block for the host Titan network.
 
