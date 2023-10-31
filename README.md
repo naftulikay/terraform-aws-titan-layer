@@ -11,5 +11,5 @@ Licensed at your discretion under either:
 
  [build]:     https://github.com/naftulikay/terraform-aws-titan-layer/actions/workflows/terraform.yml
  [build.svg]: https://github.com/naftulikay/terraform-aws-titan-layer/actions/workflows/terraform.yml/badge.svg
- [module]:     https://registry.terraform.io/modules/naftulikay/titan-network/aws/latest
+ [module]:     https://registry.terraform.io/modules/naftulikay/titan-layer/aws/latest
  [module.svg]: https://img.shields.io/badge/terraform-module-purple
